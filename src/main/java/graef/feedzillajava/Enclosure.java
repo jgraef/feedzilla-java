@@ -31,18 +31,23 @@ public class Enclosure {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
 		Enclosure other = (Enclosure) obj;
 		if (mediaType == null) {
-			if (other.mediaType != null) return false;
-		}
-		else if (!mediaType.equals(other.mediaType)) return false;
+			if (other.mediaType != null)
+				return false;
+		} else if (!mediaType.equals(other.mediaType))
+			return false;
 		if (uri == null) {
-			if (other.uri != null) return false;
-		}
-		else if (!uri.equals(other.uri)) return false;
+			if (other.uri != null)
+				return false;
+		} else if (!uri.equals(other.uri))
+			return false;
 		return true;
 	}
 

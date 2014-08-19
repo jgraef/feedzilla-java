@@ -12,12 +12,13 @@ import org.joda.time.format.DateTimeFormatter;
 
 @XmlRootElement
 public class Article {
-	private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormat.forPattern("EEE, dd MMM yyyy HH:mm:ss Z");
-	
+	private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormat
+			.forPattern("EEE, dd MMM yyyy HH:mm:ss Z");
+
 	@XmlElement(name = "author")
 	private final String author = null;
 
-	@XmlElement(name="publish_date")
+	@XmlElement(name = "publish_date")
 	private String publishDateStr = null;
 	private DateTime publishDate = null;
 
@@ -90,30 +91,38 @@ public class Article {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
 		Article other = (Article) obj;
 		if (author == null) {
-			if (other.author != null) return false;
-		}
-		else if (!author.equals(other.author)) return false;
+			if (other.author != null)
+				return false;
+		} else if (!author.equals(other.author))
+			return false;
 		if (publishDate == null) {
-			if (other.publishDate != null) return false;
-		}
-		else if (!publishDate.equals(other.publishDate)) return false;
+			if (other.publishDate != null)
+				return false;
+		} else if (!publishDate.equals(other.publishDate))
+			return false;
 		if (sourceUrl == null) {
-			if (other.sourceUrl != null) return false;
-		}
-		else if (!sourceUrl.equals(other.sourceUrl)) return false;
+			if (other.sourceUrl != null)
+				return false;
+		} else if (!sourceUrl.equals(other.sourceUrl))
+			return false;
 		if (title == null) {
-			if (other.title != null) return false;
-		}
-		else if (!title.equals(other.title)) return false;
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
 		if (url == null) {
-			if (other.url != null) return false;
-		}
-		else if (!url.equals(other.url)) return false;
+			if (other.url != null)
+				return false;
+		} else if (!url.equals(other.url))
+			return false;
 		return true;
 	}
 

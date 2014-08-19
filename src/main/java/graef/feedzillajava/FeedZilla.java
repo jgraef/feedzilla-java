@@ -31,8 +31,7 @@ public class FeedZilla {
 	public FeedZilla() {
 		try {
 			baseUrl = new URI(BASE_URL);
-		}
-		catch (URISyntaxException e) {
+		} catch (URISyntaxException e) {
 			throw new RuntimeException(e);
 		}
 		JerseyClientBuilder clientBuilder = new JerseyClientBuilder();
@@ -136,8 +135,7 @@ public class FeedZilla {
 		if (query != null) {
 			target = target.path("articles").path("search.json")
 					.queryParam("q", query);
-		}
-		else {
+		} else {
 			target = target.path("articles.json");
 		}
 		if (count != 0) {
