@@ -198,6 +198,10 @@ public class FeedZilla {
 			this.category = category;
 			return this;
 		}
+		
+		public QueryBuilder category(int categoryId) {
+			return category(new Category(categoryId));
+		}
 
 		public Subcategory getSubcategory() {
 			return subcategory;
@@ -206,6 +210,10 @@ public class FeedZilla {
 		public QueryBuilder subcategory(Subcategory subcategory) {
 			this.subcategory = subcategory;
 			return this;
+		}
+		
+		public QueryBuilder subcategory(int subcategoryId) {
+			return subcategory(new Subcategory(subcategoryId));
 		}
 
 		public int getCount() {
@@ -255,6 +263,10 @@ public class FeedZilla {
 		public QueryBuilder culture(Culture culture) {
 			this.culture = culture;
 			return this;
+		}
+		
+		public QueryBuilder culture(String cultureCode) {
+			return culture(new Culture(cultureCode));
 		}
 	}
 }
