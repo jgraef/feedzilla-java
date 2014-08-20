@@ -7,6 +7,8 @@ public class Enclosure {
 	private final String uri = null;
 	@XmlElement(name = "media_type")
 	private final String mediaType = null;
+	@XmlElement(name = "length", required=false)
+	private final long length = 0;
 
 	private Enclosure() {
 	}
@@ -18,13 +20,15 @@ public class Enclosure {
 	public String getMediaType() {
 		return mediaType;
 	}
+	
+	public long getLength() {
+		return length;
+	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((mediaType == null) ? 0 : mediaType.hashCode());
 		result = prime * result + ((uri == null) ? 0 : uri.hashCode());
 		return result;
 	}
@@ -38,11 +42,6 @@ public class Enclosure {
 		if (getClass() != obj.getClass())
 			return false;
 		Enclosure other = (Enclosure) obj;
-		if (mediaType == null) {
-			if (other.mediaType != null)
-				return false;
-		} else if (!mediaType.equals(other.mediaType))
-			return false;
 		if (uri == null) {
 			if (other.uri != null)
 				return false;
