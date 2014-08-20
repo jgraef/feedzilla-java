@@ -16,7 +16,6 @@ public class Articles {
 	@XmlElement(name = "description", required = false)
 	private final String description = null;
 
-	@SuppressWarnings("unused")
 	private Articles() {
 	}
 

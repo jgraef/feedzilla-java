@@ -96,7 +96,6 @@ public class FeedZilla {
 		if (order != null) {
 			target = target.queryParam("order", order.name().toLowerCase());
 		}
-		System.out.println(target.getUri().toString());
 		return target.request().accept(MediaType.APPLICATION_JSON)
 				.get(new GenericType<List<Subcategory>>() {
 				});
