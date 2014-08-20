@@ -15,7 +15,7 @@ public class Article {
 	private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormat
 			.forPattern("EEE, dd MMM yyyy HH:mm:ss Z");
 
-	@XmlElement(name = "author")
+	@XmlElement(name = "author", required = false)
 	private final String author = null;
 
 	@XmlElement(name = "publish_date")
