@@ -45,7 +45,6 @@ public class Article {
 	public DateTime getPublishDate() {
 		if (publishDate == null && publishDateStr != null) {
 			publishDate = DATETIME_FORMATTER.parseDateTime(publishDateStr);
-			System.out.println(publishDateStr + " = " + publishDate);
 			publishDateStr = null;
 		}
 		return publishDate;
