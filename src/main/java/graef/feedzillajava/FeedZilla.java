@@ -152,7 +152,7 @@ public class FeedZilla {
 		if (category == null && culture != null) {
 			target = target.queryParam("culture_code", culture.getCode());
 		}
-		System.out.println(target.getUri().toString());
+
 		Articles articles = target.request().accept(MediaType.APPLICATION_JSON)
 				.get(Articles.class);
 		return articles;
